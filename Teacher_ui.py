@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(560, 322)
+        MainWindow.resize(560, 329)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -88,12 +88,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.pushButton_4)
 
-        self.pushButton_5 = QPushButton(self.widget)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setMinimumSize(QSize(100, 50))
-
-        self.horizontalLayout.addWidget(self.pushButton_5)
-
 
         self.verticalLayout.addWidget(self.widget)
 
@@ -106,12 +100,11 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u5bfc\u5458\u8bc4\u6d4b\u7ed3\u679c\u5fc5\u987b\u5728\u8f6f\u4ef6\u6839\u76ee\u5f55\u628a\u6587\u4ef6\u6539\u4e3a\uff1a</p><p>excel1\uff0cexcel2\uff0cexcel3\uff0cexcel4\uff0cexcel5\uff0cexcel6</p><p>\u6559\u5e08\u8bc4\u6d4b\u7ed3\u679c\u76f4\u63a5\u9009\u62e9\u6587\u4ef6\u540e\u70b9\u51fb\u5bf9\u5e94\u7684\u6309\u952e\uff1a</p><p>\u7ed3\u679c\u4f1a\u751f\u6210\u5728\u8f6f\u4ef6\u6839\u76ee\u5f55</p><p>\u9886\u5bfc\u8bc4\u6d4b\u7ed3\u679c\u9700\u8981\u628a\u6700\u540e\u7684\u591a\u4f59\u7684\u884c\u5220\u9664\uff0c\u4fdd\u8bc1\u884c\u6570\u662f5\u7684\u500d\u6570\u70b9\u51fb\u5bf9\u5e94\u7684\u6309\u952e\uff1a</p><p>\u7ed3\u679c\u4f1a\u751f\u6210\u5728\u8f6f\u4ef6\u6839\u76ee\u5f55</p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>1.\u5bfc\u5458\u8bc4\u6d4b\u7ed3\u679c\u5fc5\u987b\u5728\u8f6f\u4ef6\u6839\u76ee\u5f55\u628a\u6587\u4ef6\u6539\u4e3a\uff1a</p><p>excel1\uff0cexcel2\uff0cexcel3\uff0cexcel4\uff0cexcel5\uff0cexcel6</p><p>2.\u6559\u5e08\u8bc4\u6d4b\u7ed3\u679c\u76f4\u63a5\u9009\u62e9\u6587\u4ef6\u540e\u70b9\u51fb\u5bf9\u5e94\u7684\u6309\u952e</p><p>3.\u9886\u5bfc\u8bc4\u6d4b\u7ed3\u679c\u9700\u8981\u628a\u6700\u540e\u7684\u591a\u4f59\u7684\u884c\u5220\u9664\uff0c\u4fdd\u8bc1\u884c\u6570\u662f5\u7684\u500d\u6570\u70b9\u51fb\u5bf9\u5e94\u7684\u6309\u952e</p><p>4.\u90e8\u95e8\u8bc4\u6d4b\u7ed3\u679c\u9700\u8981\u628a\u6700\u540e\u7684\u610f\u89c1\uff0c\u603b\u5206\uff0c\u63d0\u4ea4\u65f6\u95f4\uff0c\u4e09\u5217\u5220\u9664\u7136\u540e\u9009\u62e9\u6587\u4ef6\u70b9\u51fb\u751f\u6210</p><p><br/></p></body></html>", None))
         self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"\u9009\u62e9\u6587\u4ef6", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u6559\u5e08\u8bc4\u6d4b\u7ed3\u679c", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u5bfc\u5458\u8bc4\u6d4b\u7ed3\u679c", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u9886\u5bfc\u8bc4\u6d4b\u7ed3\u679c", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"\u90e8\u95e8\u8bc4\u6d4b\u7ed3\u679c", None))
     # retranslateUi
 

@@ -52,5 +52,5 @@ def fudaoyuan_result():
     result_df.columns = ["姓名", "政治素养", "道德品质", "管理能力", "解决问题", "测评人数"]
     result_df["平均数"] = round(result_df[["政治素养", "道德品质", "管理能力", "解决问题"]].mean(axis=1), 2)
 
-    result_df.to_excel("result.xlsx")
+    result_df.to_excel("辅导员评测结果.xlsx")
 

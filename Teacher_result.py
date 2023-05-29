@@ -5,6 +5,26 @@ import pandas as pd
 
 
 def creat_result(excel_path):
+    def get_people():
+        new_df_people = pd.DataFrame(columns=["教师", "课程名称", "应参评人数"])
+        grouped = df_people.groupby(["课程名称", "教师"])
+        for (course, teacher), group in grouped:
+            attitude_avg = pd.to_numeric(group["应参评人数"]).sum()
+            new_row = pd.DataFrame(
+                [
+                    [
+                        teacher,
+                        course,
+                        attitude_avg,
+                    ]
+                ],
+                columns=["教师", "课程名称", "应参评人数"],
+            )
+            new_df_people = pd.concat([new_df_people, new_row], ignore_index=True)
+            
+        return new_df_people
+    
+    df_people = pd.read_excel(excel_path, sheet_name="课程评分")[['课程名称','教师','应参评人数']]
     df = pd.read_excel(excel_path, sheet_name="具体评教内容")
     # 计算平均分并创建新的DataFrame
     new_df = pd.DataFrame(columns=["教师", "课程名称", "教学态度", "教学内容", "课堂管理", "师德师风", "相同行数"])
@@ -59,8 +79,11 @@ def creat_result(excel_path):
         lambda x: f"{round(x, 2)}分" if pd.notnull(x) else ""
     )
 
-    new_df.to_excel("结果表格.xlsx", index=False)
 
+    new_df_p=get_people()
+    merged_df = new_df.merge(new_df_p, on=['教师', '课程名称'])
+    merged_df.to_excel("教师结果评测.xlsx", index=False)
+    # new_df.to_excel("教师结果评测_1.xlsx", index=False)
 
 # def check_code(excel_path):
 #     df = pd.read_excel(excel_path)
@@ -99,3 +122,5 @@ def creat_result(excel_path):
 #                 # 如果包含乱码，则输出单元格的行和列
 #                 print(f"乱码出现在第{i + 1}行，第{j + 1}列，单元格的值为：{value}")
 
+# if __name__ == "__main__":
+#     creat_result("1.xlsx")

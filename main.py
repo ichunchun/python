@@ -4,6 +4,7 @@ from Teacher_ui import Ui_MainWindow
 from Teacher_result import creat_result
 from leader_result import creat_leader_result
 from fudaoyuan_result import fudaoyuan_result
+from Management_result import management_result
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -15,6 +16,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pushButton.clicked.connect(lambda: self.creat_result())
         self.pushButton_3.clicked.connect(lambda: self.creat_fudaoyuan_result())
         self.pushButton_2.clicked.connect(lambda: self.creat_leader_result())
+        self.pushButton_4.clicked.connect(lambda: self.creat_management_result())
 
     def creat_result(self):
         # print(self.lineEdit.text())
@@ -30,6 +32,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def creat_fudaoyuan_result(self):
         fudaoyuan_result()
+
+    def creat_management_result(self):
+        print(self.lineEdit.text())
+        management_result(self.lineEdit.text())
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
